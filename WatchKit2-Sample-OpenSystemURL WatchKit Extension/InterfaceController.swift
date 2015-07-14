@@ -28,4 +28,13 @@ class InterfaceController: WKInterfaceController {
         super.didDeactivate()
     }
 
+    @IBAction func makeAPhoneCall() {
+        let extent = WKExtension.sharedExtension()
+        extent.openSystemURL(NSURL(string: "tel:")!)
+    }
+    
+    @IBAction func sendSms() {
+        let extent = WKExtension.sharedExtension()
+        extent.openSystemURL(NSURL(string: "sms:")!)
+    }
 }

@@ -1,14 +1,34 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6221" systemVersion="13E28" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="8152.3" systemVersion="14E46" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6213"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3733"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8124.4"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="8077.2"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider="target"/>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="WatchKit2_Sample_OpenSystemURL_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label alignment="left" text="WKExtension" id="VJl-f6-QGS">
+                            <fontDescription key="font" style="UICTFontTextStyleBody"/>
+                        </label>
+                        <label alignment="left" text="openSystemURL" id="Chx-8n-eP6"/>
+                        <button width="1" alignment="left" title="打电话" id="cHQ-LM-rS3">
+                            <connections>
+                                <action selector="makeAPhoneCall" destination="AgC-eL-Hgc" id="8Xd-yS-O0p"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="发消息" id="be5-QE-cJG">
+                            <connections>
+                                <action selector="sendSms" destination="AgC-eL-Hgc" id="a0E-zX-6zg"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="makePhoneCall" destination="cHQ-LM-rS3" id="ux9-S6-Q6z"/>
+                    </connections>
+                </controller>
             </objects>
         </scene>
     </scenes>
