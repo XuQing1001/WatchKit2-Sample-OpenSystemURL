@@ -30,11 +30,11 @@ class InterfaceController: WKInterfaceController {
 
     @IBAction func makeAPhoneCall() {
         let extent = WKExtension.sharedExtension()
-        extent.openSystemURL(NSURL(string: "tel:")!)
+        extent.openSystemURL(NSURL(string: "tel:number")!)
     }
     
     @IBAction func sendSms() {
         let extent = WKExtension.sharedExtension()
-        extent.openSystemURL(NSURL(string: "sms:")!)
+        extent.openSystemURL(NSURL(string: "sms:number")!)
     }
 }
